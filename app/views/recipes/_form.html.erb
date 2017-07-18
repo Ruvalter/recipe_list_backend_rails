@@ -1,0 +1,15 @@
+<%= simple_form_for @recipes do |f| %>
+
+  <% if @recipes.errors.any? %>
+    <ul>
+      <% @recipes.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.input :name %>
+  <%= f.input :description %>
+
+  <%= f.button :submit %>
+<% end %>

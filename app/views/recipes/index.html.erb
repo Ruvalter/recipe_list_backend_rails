@@ -1,0 +1,15 @@
+<h1>Recipes</h1>
+
+<table class="table">
+  <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%= link_to recipes.name, recipes %></td>
+      <td><%= link_to "Edit", edit_recipes_path(product) %></td>
+      <td><%= link_to "Delete", recipes, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to "Criar produto", new_recipes_path  %>
+</p>

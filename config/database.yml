@@ -1,0 +1,35 @@
+# Aqui vou colocar as configurações do postgreSQL
+# PostgreSQl.
+#
+#
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  #escolher qualquer nome
+  database: recipe_database_development
+  pool: 5
+  #usuario do mac
+  username: ruvalter
+  password:
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test: &test
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: recipe_database_test
+  pool: 5
+  username: ruvalter
+  password:
+
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: recipe_database_production
+  pool: 5
+  username: ruvalter
+  password:
