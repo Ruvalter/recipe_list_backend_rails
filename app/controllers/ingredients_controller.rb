@@ -11,17 +11,17 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    @ingredients = Ingredient.new(ingredients_params)
+    @ingredient = Ingredient.new(ingredient_params)
 
-    if @ingredients.save
-      render json: @ingredients
+    if @ingredient.save
+      render json: @ingredient
     else
-      render json: @ingredients.errors.messages
+      render json: @ingredient.errors.messages
     end
   end
 
   def ingredients_params
-    params.require(:ingrdients).permit(:id, :name, :amount)
+    params.require(:ingredient).permit(:name, :amount)
   end
 
 end
